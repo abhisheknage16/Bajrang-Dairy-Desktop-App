@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<StackPane alignment="TOP_CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="650.0" prefWidth="1019.0" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.BuffaloReports">
+    <children>
+        <VBox alignment="TOP_CENTER" prefHeight="200.0" prefWidth="100.0" StackPane.alignment="TOP_CENTER">
+            <children>
+                <Label fx:id="lblmilkrprt" alignment="CENTER" prefHeight="30.0" prefWidth="438.0" text="म्हशीच्या दुधाचा अहवाल">
+                    <VBox.margin>
+                        <Insets bottom="20.0" />
+                    </VBox.margin>
+               <font>
+                  <Font name="System Bold" size="22.0" />
+               </font>
+                </Label>
+                <Pane prefHeight="650.0" prefWidth="1019.0">
+                    <children>
+                        <Button fx:id="export" layoutX="916.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="71.0" text="पाठवा">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                        </Button>
+                        <DatePicker fx:id="sdate" layoutX="391.0" layoutY="2.0" prefHeight="25.0" prefWidth="150.0" promptText="पासून" />
+                        <DatePicker fx:id="edate" layoutX="564.0" layoutY="2.0" prefHeight="25.0" prefWidth="150.0" promptText="पर्यंत" />
+                        <TableView fx:id="tbl" layoutX="45.0" layoutY="43.0" prefHeight="434.0" prefWidth="947.0">
+                            <columns>
+                                <TableColumn fx:id="snumber" prefWidth="75.0" text="स.नं." />
+                                <TableColumn fx:id="cname" prefWidth="210.66665649414062" text="सभासदाचे नाव" />
+                                <TableColumn fx:id="totalmilk" prefWidth="100.33334350585938" text="एकूण दूध" />
+                                <TableColumn fx:id="avgfat" prefWidth="91.66665649414062" text="सरासरी फॅट" />
+                                <TableColumn fx:id="avgdegree" prefWidth="97.33334350585938" text="सरासरी डिग्री" />
+                                <TableColumn fx:id="avgsnf" prefWidth="106.0" text="सामान्य फॅट" />
+                                <TableColumn fx:id="avgrate" prefWidth="111.0" text="सरासरी दर" />
+                                <TableColumn fx:id="tpayment" prefWidth="155.0" text="एकूण रक्कम" />
+                            </columns>
+                        </TableView>
+                  <TextField fx:id="txtSearch" layoutX="726.0" layoutY="2.0" prefWidth="170.0" promptText="शोधा" />
+                  <Label fx:id="lblTotalMilk" layoutX="54.0" layoutY="490.0" prefHeight="31.0" prefWidth="220.0" text="Total Milk :" textFill="#ab00ff">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="lblAvgGenFat" layoutX="307.0" layoutY="490.0" prefHeight="31.0" prefWidth="325.0" text="Total General FAT :" textFill="#ab00ff">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="lblTotalAmount" layoutX="708.0" layoutY="490.0" prefHeight="31.0" prefWidth="260.0" text="Total Amount :" textFill="#ab00ff">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </Label>
+                    </children>
+                </Pane>
+            </children>
+            <StackPane.margin>
+                <Insets top="20.0" />
+            </StackPane.margin>
+        </VBox>
+    </children>
+</StackPane>

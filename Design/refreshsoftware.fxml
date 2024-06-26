@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<StackPane alignment="TOP_CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="650.0" prefWidth="1019.0" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.RefreshSoftware">
+    <children>
+        <VBox alignment="TOP_CENTER" prefHeight="200.0" prefWidth="100.0" StackPane.alignment="TOP_CENTER">
+            <children>
+                <Label fx:id="lblTitle" alignment="CENTER" prefHeight="60.0" prefWidth="290.0" text="रीफ्रेश सॉफ्टवेअर">
+                    <font>
+                        <Font name="System Bold" size="22.0" />
+                    </font>
+                    <VBox.margin>
+                        <Insets bottom="20.0" />
+                    </VBox.margin>
+                </Label>
+                <Pane prefHeight="604.0" prefWidth="1019.0">
+                    <children>
+                        <Label fx:id="lblNotice" alignment="CENTER" layoutX="70.0" layoutY="7.0" prefHeight="228.0" prefWidth="880.0" text="सॉफ्टवेअर रिफ्रेश करण्यापूर्वी कृपया बॅकअप घ्या जर सॉफ्टवेअर रिफ्रेश करतानी किव्वा &#10;केल्या नंतर जर काही समस्या आली तर पूर्वीची बॅकअप फाईल रिस्टोर करा .&#10;रिफ्रेश केल्या नंतर सॉफ्टवेअर बंद होईल &#10;काही समस्या असेल तर कंपनी सोबत संपर्क साधा." textAlignment="CENTER" textFill="RED">
+                            <font>
+                                <Font size="24.0" />
+                            </font>
+                        </Label>
+                  <Button fx:id="btnSoft" layoutX="262.0" layoutY="244.0" mnemonicParsing="false" prefHeight="51.0" prefWidth="170.0" text="सॉफ्ट रिफ्रेश">
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="btnHard" layoutX="560.0" layoutY="244.0" mnemonicParsing="false" prefHeight="51.0" prefWidth="170.0" text="हार्ड रिफ्रेश">
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                  </Button>
+                    </children>
+                </Pane>
+            </children>
+            <StackPane.margin>
+                <Insets top="20.0" />
+            </StackPane.margin>
+        </VBox>
+    </children>
+</StackPane>

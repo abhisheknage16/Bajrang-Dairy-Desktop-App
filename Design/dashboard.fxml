@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<StackPane alignment="TOP_CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="682.0" prefWidth="1019.0" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.Dashboard">
+   <children>
+      <VBox alignment="TOP_CENTER" prefHeight="200.0" prefWidth="100.0" spacing="20.0">
+         <opaqueInsets>
+            <Insets />
+         </opaqueInsets>
+         <StackPane.margin>
+            <Insets top="20.0" />
+         </StackPane.margin>
+         <children>
+            <Pane prefHeight="672.0" prefWidth="1019.0">
+               <children>
+                  <Label fx:id="lblDashboard" alignment="CENTER" layoutX="-1.0" layoutY="124.0" prefHeight="156.0" prefWidth="958.0" text="बजरंग डेअरी" textFill="#0010ff">
+                     <font>
+                        <Font name="System Bold" size="55.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="lblLastLogin" alignment="CENTER_RIGHT" layoutX="251.0" layoutY="260.0" prefHeight="42.0" prefWidth="241.0">
+                     <font>
+                        <Font size="17.0" />
+                     </font></Label>
+                  <Label fx:id="lblCurrentTime" layoutX="503.0" layoutY="260.0" prefHeight="42.0" prefWidth="241.0">
+                     <font>
+                        <Font size="17.0" />
+                     </font></Label>
+               </children>
+            </Pane>
+         </children>
+      </VBox>
+   </children>
+</StackPane>

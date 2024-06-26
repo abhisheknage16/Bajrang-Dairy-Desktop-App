@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+
+<GridPane alignment="center" hgap="10" prefHeight="337.0" prefWidth="482.0" vgap="10" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.Warning">
+    <columnConstraints>
+        <ColumnConstraints />
+    </columnConstraints>
+    <rowConstraints>
+        <RowConstraints />
+    </rowConstraints>
+    <children>
+        <Pane prefHeight="325.0" prefWidth="462.0">
+            <children>
+            <ImageView fitHeight="343.0" fitWidth="491.0" layoutX="-11.0" layoutY="-12.0">
+               <image>
+                  <Image url="@login_background.jpg" />
+               </image>
+            </ImageView>
+            <Label layoutX="109.0" layoutY="2.0" text="Bajarang Dairy" textFill="#39e507">
+               <font>
+                  <Font name="System Bold" size="36.0" />
+               </font>
+            </Label>
+            <Label fx:id="warning" alignment="TOP_CENTER" layoutX="7.0" layoutY="79.0" prefHeight="37.0" prefWidth="452.0" text="You are running the setup" textFill="#caff00" visible="true">
+               <font>
+                  <Font name="System Bold" size="20.0" />
+               </font></Label>
+            <Label fx:id="warning1" alignment="TOP_CENTER" layoutX="7.0" layoutY="111.0" prefHeight="37.0" prefWidth="452.0" text="that is private property of SoftTheNext" textFill="#caff00" visible="true">
+               <font>
+                  <Font name="System Bold" size="20.0" />
+               </font>
+            </Label>
+            <Label fx:id="warning11" alignment="TOP_CENTER" layoutX="6.0" layoutY="150.0" prefHeight="37.0" prefWidth="452.0" text="If you do not contact to SoftTheNext" textFill="#caff00" visible="true">
+               <font>
+                  <Font name="System Bold" size="20.0" />
+               </font>
+            </Label>
+            <Label fx:id="warning111" alignment="TOP_CENTER" layoutX="6.0" layoutY="186.0" prefHeight="37.0" prefWidth="452.0" text="then Legal action will be taken." textFill="#caff00" visible="true">
+               <font>
+                  <Font name="System Bold" size="20.0" />
+               </font>
+            </Label>
+            <Label fx:id="warning1111" alignment="TOP_CENTER" layoutX="6.0" layoutY="219.0" prefHeight="37.0" prefWidth="452.0" text="Please contact to SoftTheNext" textFill="#caff00" visible="true">
+               <font>
+                  <Font name="System Bold" size="20.0" />
+               </font>
+            </Label>
+            </children>
+        </Pane>
+    </children>
+</GridPane>

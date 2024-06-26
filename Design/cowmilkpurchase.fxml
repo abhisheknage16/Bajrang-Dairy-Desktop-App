@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<StackPane alignment="TOP_CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="650.0" prefWidth="1019.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.CowMilkPurchase">
+    <children>
+        <VBox alignment="TOP_CENTER" prefHeight="200.0" prefWidth="100.0" StackPane.alignment="TOP_CENTER">
+            <children>
+                <Label fx:id="lblTitle" alignment="CENTER" prefHeight="45.0" prefWidth="379.0" text="गायीच्या दुधाची खरेदी">
+                    <VBox.margin>
+                        <Insets bottom="20.0" />
+                    </VBox.margin>
+                    <font>
+                        <Font name="System Bold" size="22.0" />
+                    </font>
+                </Label>
+                <Pane prefHeight="604.0" prefWidth="1019.0">
+                    <children>
+                        <DatePicker fx:id="date" layoutX="415.0" layoutY="16.0" prefHeight="25.0" prefWidth="200.0" promptText="तारीख निवडा" />
+                        <RadioButton fx:id="rdbtnMorning" layoutX="418.0" layoutY="53.0" mnemonicParsing="false" selected="true" text="सकाळ">
+                            <font>
+                                <Font size="15.0" />
+                            </font>
+                            <toggleGroup>
+                                <ToggleGroup fx:id="rad" />
+                            </toggleGroup>
+                        </RadioButton>
+                        <RadioButton fx:id="rdbtnEvening" layoutX="528.0" layoutY="53.0" mnemonicParsing="false" text="संध्याकाळ" toggleGroup="$rad">
+                            <font>
+                                <Font size="15.0" />
+                            </font>
+                        </RadioButton>
+                        <TextField fx:id="txtCustNo" layoutX="415.0" layoutY="85.0" onKeyReleased="#onCustChanged" prefHeight="25.0" prefWidth="200.0" promptText="सभासद नं." />
+                        <ComboBox fx:id="txtCustName" editable="true" focusTraversable="false" layoutX="416.0" layoutY="123.0" prefHeight="25.0" prefWidth="200.0" promptText="सभासद निवडा" />
+                        <TextField fx:id="txtMilk" layoutX="417.0" layoutY="162.0" onKeyReleased="#onMilkChanged" prefHeight="25.0" prefWidth="200.0" promptText="एकूण दूध" />
+                        <TextField fx:id="txtFAT" layoutX="417.0" layoutY="201.0" onKeyReleased="#onMilkChanged" prefHeight="25.0" prefWidth="200.0" promptText="फॅट टाका" />
+                        <TextField fx:id="txtDegree" layoutX="417.0" layoutY="240.0" onKeyReleased="#onMilkChanged" prefHeight="25.0" prefWidth="200.0" promptText="एस.एन.एफ." />
+<!--                        <TextField fx:id="txtGFAT" layoutX="417.0" layoutY="280.0" prefHeight="25.0" prefWidth="200.0" promptText="जनरल फॅट टाका" />-->
+                        <TextField fx:id="txtRate" layoutX="418.0" layoutY="279.0" onKeyReleased="#onRateChanged" prefHeight="25.0" prefWidth="200.0" promptText="दर टाका" />
+                        <TextField fx:id="txtTotalAmt" layoutX="418.0" layoutY="317.0" prefHeight="25.0" prefWidth="200.0" promptText="रक्कम टाका" />
+                        <Button fx:id="btnAdd" defaultButton="true" layoutX="351.0" layoutY="399.0" mnemonicParsing="false" prefHeight="29.0" prefWidth="87.0" text="जमा">
+                            <font>
+                                <Font size="15.0" />
+                            </font>
+                        </Button>
+                        <Button fx:id="btnPrint" layoutX="450.0" layoutY="399.0" mnemonicParsing="false" prefHeight="29.0" prefWidth="87.0" text="प्रिंट">
+                            <font>
+                                <Font size="15.0" />
+                            </font>
+                        </Button>
+                        <Button fx:id="btnReset" layoutX="552.0" layoutY="399.0" mnemonicParsing="false" prefHeight="29.0" prefWidth="87.0" text="पुसून टाका">
+                            <font>
+                                <Font size="15.0" />
+                            </font>
+                        </Button>
+                        <Label fx:id="lblcno" alignment="CENTER_RIGHT" layoutX="295.0" layoutY="87.0" prefHeight="21.0" prefWidth="110.0" text="सभासद नं. :">
+                            <font>
+                                <Font size="15.0" />
+                            </font>
+                        </Label>
+                        <Label fx:id="lblcustname" alignment="CENTER_RIGHT" layoutX="285.0" layoutY="124.0" prefHeight="21.0" prefWidth="121.0" text="सभासदाचे नाव :">
+                            <font>
+                                <Font size="15.0" />
+                            </font>
+                        </Label>
+                        <Label fx:id="lblmilk" alignment="CENTER_RIGHT" layoutX="352.0" layoutY="164.0" prefHeight="21.0" prefWidth="56.0" text="दूध :">
+                            <font>
+                                <Font size="15.0" />
+                            </font>
+                        </Label>
+                        <Label fx:id="lbldeg" alignment="CENTER_RIGHT" layoutX="308.0" layoutY="241.0" prefHeight="21.0" prefWidth="99.0" text="डिग्री :">
+                            <font>
+                                <Font size="15.0" />
+                            </font>
+                        </Label>
+                        <Label fx:id="warn" alignment="CENTER" layoutX="266.0" layoutY="362.0" prefHeight="31.0" prefWidth="455.0" text="" textFill="RED">
+                            <font>
+                                <Font size="16.0" />
+                            </font></Label>
+                        <Label fx:id="lblrate" alignment="CENTER_RIGHT" layoutX="353.0" layoutY="280.0" prefHeight="22.0" prefWidth="56.0" text="दर :">
+                            <font>
+                                <Font size="15.0" />
+                            </font>
+                        </Label>
+                        <Label fx:id="lbltotalamount" alignment="CENTER_RIGHT" layoutX="252.0" layoutY="318.0" prefHeight="22.0" prefWidth="156.0" text="एकूण रक्कम :">
+                            <font>
+                                <Font size="15.0" />
+                            </font>
+                        </Label>
+                        <Label fx:id="lbltime" alignment="CENTER_RIGHT" layoutX="357.0" layoutY="50.0" prefHeight="22.0" prefWidth="49.0" text="वेळ :">
+                            <font>
+                                <Font name="System Bold" size="15.0" />
+                            </font>
+                        </Label>
+                        <Label fx:id="lbldate" alignment="CENTER_RIGHT" layoutX="356.0" layoutY="17.0" prefHeight="22.0" prefWidth="49.0" text="तारीख :">
+                            <font>
+                                <Font size="15.0" />
+                            </font>
+                        </Label>
+                        <Label fx:id="lblfat" alignment="CENTER_RIGHT" layoutX="352.0" layoutY="203.0" prefHeight="21.0" prefWidth="56.0" text="फॅट :">
+                            <font>
+                                <Font size="15.0" />
+                            </font>
+                        </Label>
+                    </children>
+                </Pane>
+            </children>
+            <StackPane.margin>
+                <Insets top="20.0" />
+            </StackPane.margin>
+        </VBox>
+    </children>
+</StackPane>

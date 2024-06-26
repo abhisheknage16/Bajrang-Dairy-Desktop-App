@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+
+<GridPane alignment="center" hgap="10" prefHeight="337.0" prefWidth="482.0" vgap="10" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.MainController">
+    <columnConstraints>
+        <ColumnConstraints />
+    </columnConstraints>
+    <rowConstraints>
+        <RowConstraints />
+    </rowConstraints>
+    <children>
+        <Pane prefHeight="325.0" prefWidth="462.0">
+            <children>
+            <ImageView fitHeight="343.0" fitWidth="491.0" layoutX="-11.0" layoutY="-12.0" opacity="0.5">
+               <image>
+                  <Image url="@login_background.JPG" />
+               </image>
+            </ImageView>
+            <Label fx:id="lblhead" alignment="CENTER" contentDisplay="CENTER" layoutY="2.0" prefHeight="53.0" prefWidth="462.0" text="बजरंग डेअरी" textFill="#1c0443">
+               <font>
+                  <Font name="System Bold" size="36.0" />
+               </font>
+            </Label>
+            <TextField fx:id="uname" alignment="CENTER" layoutX="125.0" layoutY="71.0" prefHeight="30.0" prefWidth="225.0" promptText="युजरनेम" />
+            <PasswordField fx:id="pass" alignment="CENTER" layoutX="125.0" layoutY="138.0" prefHeight="30.0" prefWidth="225.0" promptText="********" />
+            <ComboBox fx:id="comboLang" layoutX="312.0" layoutY="298.0" prefWidth="150.0" promptText="Choose Language" />
+            <Button fx:id="login" defaultButton="true" layoutX="110.0" layoutY="217.0" mnemonicParsing="false" prefHeight="31.0" prefWidth="111.0" text="लॉगिन" textFill="#1b1a1a">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </Button>
+            <Button fx:id="reset" cancelButton="true" layoutX="272.0" layoutY="217.0" mnemonicParsing="false" prefHeight="31.0" prefWidth="111.0" text="रद्द" textFill="#1b1a1a">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+                <cursor>
+                    <Cursor fx:constant="HAND" />
+                </cursor>
+            </Button>
+            <Label fx:id="warn" alignment="CENTER" layoutX="50.0" layoutY="191.0" prefHeight="17.0" prefWidth="390.0" textFill="RED" visible="true" />
+            <Label fx:id="forpass" alignment="CENTER" layoutX="147.0" layoutY="266.0" prefHeight="20.0" prefWidth="197.0" text="संकेतशब्द विसरलात ?" textFill="#1c0443">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font></Label>
+            </children>
+        </Pane>
+    </children>
+</GridPane>

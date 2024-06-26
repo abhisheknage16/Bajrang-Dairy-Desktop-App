@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<StackPane alignment="TOP_CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="650.0" prefWidth="1019.0" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.ViewExpense">
+    <children>
+        <VBox alignment="TOP_CENTER" prefHeight="200.0" prefWidth="100.0" StackPane.alignment="TOP_CENTER">
+            <children>
+                <Label fx:id="lblTitle" alignment="CENTER" prefHeight="32.0" prefWidth="386.0" text="खर्च पहा">
+                    <font>
+                        <Font name="System Bold" size="22.0" />
+                    </font>
+                    <VBox.margin>
+                        <Insets />
+                    </VBox.margin>
+                </Label>
+                <HBox prefHeight="32.0" prefWidth="1019.0" spacing="20.0">
+                    <children>
+                        <DatePicker fx:id="sdate" promptText="पासून " />
+                        <DatePicker fx:id="edate" promptText="पर्यंत " />
+                        <TextField fx:id="txtSearch" promptText="शोधा" />
+                        <Button fx:id="btnExport" mnemonicParsing="false" text="जतन करा ">
+                     <HBox.margin>
+                        <Insets />
+                     </HBox.margin></Button>
+                    </children>
+                    <padding>
+                        <Insets left="20.0" right="20.0" />
+                    </padding>
+                </HBox>
+                <Pane prefHeight="550.0" prefWidth="1019.0">
+                    <children>
+                        <VBox alignment="TOP_CENTER" prefHeight="550.0" prefWidth="1019.0" spacing="5.0">
+                            <children>
+                                <HBox alignment="TOP_CENTER" prefHeight="500.0" prefWidth="1019.0" spacing="3.0">
+                                    <children>
+                                        <TableView fx:id="tbl" prefHeight="550.0" prefWidth="1019.0" style="-fx-border-color: black;">
+                                            <columns>
+                                                <TableColumn fx:id="tsrno" editable="false" minWidth="20.0" prefWidth="68.00000381469727" text="अनु. क्र." />
+                                                <TableColumn fx:id="tdate" editable="false" minWidth="55.999996185302734" prefWidth="121.33332824707031" text="तारीख " />
+                                                <TableColumn fx:id="tename" editable="false" minWidth="154.99996948242188" prefWidth="344.0" text="नाव" />
+                                                <TableColumn fx:id="ttotal" editable="false" minWidth="101.66668701171875" prefWidth="260.66668701171875" text="एकूण " />
+                                                <TableColumn fx:id="teno" editable="false" minWidth="0.0" prefWidth="0.0" text="Eno" visible="false" />
+                                            </columns>
+                                        </TableView>
+                                    </children>
+                                </HBox>
+                            </children>
+                        </VBox>
+                    </children>
+                </Pane>
+            </children>
+            <StackPane.margin>
+                <Insets top="20.0" />
+            </StackPane.margin>
+        </VBox>
+    </children>
+</StackPane>

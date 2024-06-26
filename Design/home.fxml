@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.SeparatorMenuItem?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.effect.Bloom?>
+<?import javafx.scene.input.KeyCodeCombination?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane fx:id="borderPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.Home">
+
+    <bottom>
+        <Label alignment="CENTER" prefHeight="38.0" prefWidth="327.0" text="Cow_Milk Alt+C   Buffalo_Milk Alt+B   Milk_Sale Alt+M&#10;All Rights reserved to Soft The Next " textAlignment="CENTER" BorderPane.alignment="CENTER">
+            <BorderPane.margin>
+                <Insets />
+            </BorderPane.margin></Label>
+    </bottom>
+    <center>
+        <StackPane fx:id="stack" alignment="TOP_CENTER" prefHeight="243.0" prefWidth="796.0" BorderPane.alignment="TOP_CENTER" />
+    </center>
+    <top>
+        <SplitPane orientation="VERTICAL" prefHeight="25.0" prefWidth="1000.0" BorderPane.alignment="CENTER">
+            <items>
+                <BorderPane prefHeight="100.0" prefWidth="1000.0">
+                    <top>
+                        <MenuBar fx:id="menuBar" prefHeight="25.0" prefWidth="1000.0" style="-fx-padding: 5; -fx-background-color: #9db6F4;" useSystemMenuBar="true" BorderPane.alignment="CENTER">
+                            <menus>
+                                <Menu fx:id="home" mnemonicParsing="false" style="-fx-font-weight: bold;" text="होम">
+                                    <items>
+                                        <MenuItem fx:id="updatepass" mnemonicParsing="false" text="संकेतशब्द अद्यतनित करा" />
+                                        <MenuItem fx:id="updateseq" mnemonicParsing="false" text="सुरक्षा प्रश्न अद्यतनित करा" />
+                                        <MenuItem fx:id="setColor" mnemonicParsing="false" text="रंग सेटिंग" />
+                                        <SeparatorMenuItem mnemonicParsing="false" />
+                                        <MenuItem fx:id="backup" mnemonicParsing="false" text="बॅकअप" />
+                                        <MenuItem fx:id="restore" mnemonicParsing="false" text="पुनर्संचयित करा" visible="false" />
+                                        <MenuItem fx:id="refreshsoftware" mnemonicParsing="false" text="रीफ्रेश सॉफ्टवेअर" visible="false" />
+                                        <SeparatorMenuItem mnemonicParsing="false" />
+                                        <MenuItem fx:id="exit" mnemonicParsing="false" text="बाहेर पडा" />
+                                    </items>
+                                </Menu>
+
+                                <Menu fx:id="customer" mnemonicParsing="false" style="-fx-font-weight: bold;" text="सभासद">
+                                    <items>
+                                        <MenuItem fx:id="addcust" mnemonicParsing="false" text="सभासद जोडा" />
+                                        <MenuItem fx:id="viewcust" mnemonicParsing="false" text="सर्व पहा" />
+                                    </items>
+                                </Menu>
+                                <Menu fx:id="payment" mnemonicParsing="false" style="-fx-font-weight: bold;" text="पेमेंट">
+                                    <items>
+                                        <MenuItem fx:id="addcredit" mnemonicParsing="false" text="जमा" />
+                                        <MenuItem fx:id="viewcredit" mnemonicParsing="false" text="जमा अहवाल" />
+                                        <SeparatorMenuItem mnemonicParsing="false" />
+                                        <MenuItem fx:id="adddebit" mnemonicParsing="false" text="डेबिट" />
+                                        <MenuItem fx:id="viewdebit" mnemonicParsing="false" text="डेबिट अहवाल" />
+                                        <SeparatorMenuItem mnemonicParsing="false" />
+                                        <MenuItem fx:id="viewpending" mnemonicParsing="false" text="प्रलंबित पेमेंट" />
+                                        <MenuItem fx:id="viewactivity" mnemonicParsing="false" text="खाते क्रियाकलाप" />
+                                    </items>
+                                </Menu>
+
+                                <Menu fx:id="milkpurchase" mnemonicParsing="false" style="-fx-font-weight: bold;" text="दूध खरेदी">
+                                    <items>
+                                        <MenuItem fx:id="combomilkpurchase" mnemonicParsing="false" text="दोन्ही दूध खरेदी" />
+                                        <SeparatorMenuItem mnemonicParsing="false" />
+                                        <MenuItem fx:id="cowmilk" mnemonicParsing="false" text="गायीच्या दुधाची खरेदी">
+                                 <accelerator>
+                                    <KeyCodeCombination alt="DOWN" code="C" control="UP" meta="UP" shift="UP" shortcut="UP" />
+                                 </accelerator></MenuItem>
+                                        <MenuItem fx:id="buffalomilk" mnemonicParsing="false" text="म्हशीच्या दुधाची खरेदी">
+                                 <accelerator>
+                                    <KeyCodeCombination alt="DOWN" code="B" control="UP" meta="UP" shift="UP" shortcut="UP" />
+                                 </accelerator></MenuItem>
+                                        <MenuItem fx:id="milksale" mnemonicParsing="false" text="दुधाची विक्री">
+                                 <accelerator>
+                                    <KeyCodeCombination alt="DOWN" code="M" control="UP" meta="UP" shift="UP" shortcut="UP" />
+                                 </accelerator></MenuItem>
+                                    </items>
+                                </Menu>
+
+                                <Menu fx:id="viewmilkpurchase" mnemonicParsing="false" style="-fx-font-weight: bold;" text="दूध खरेदी पहा">
+                                    <items>
+                                        <MenuItem fx:id="viewcowmilk" mnemonicParsing="false" text="गायीच्या दुधाची खरेदी" />
+                                        <MenuItem fx:id="viewbuffalomilk" mnemonicParsing="false" text="म्हशीच्या दुधाची खरेदी" />
+                                    </items>
+                                </Menu>
+
+                                <Menu fx:id="ratechange" mnemonicParsing="false" style="-fx-font-weight: bold;" text="दर बदल">
+                                    <items>
+<!--                                        <MenuItem fx:id="cowrate" mnemonicParsing="false" text="गायीच्या दुधाचे दर बदल" />-->
+<!--                                        <MenuItem fx:id="buffalorate" mnemonicParsing="false" text="म्हशीच्या दुधाचे दर बदल" />-->
+                                        <MenuItem fx:id="cowrate1" mnemonicParsing="false" text="गायीच्या दुधाचे दर बदल" />
+
+<!--                                        <MenuItem fx:id="cowrate2" mnemonicParsing="false" text="गायीच्या दुधाचे दर बदल" />-->
+                                        <MenuItem fx:id="viewcowrate1" mnemonicParsing="false" text="गायीच्या दुधाचे दर" visible="false" />
+                                        <SeparatorMenuItem mnemonicParsing="false" />
+                                        <MenuItem fx:id="buffalorate1" mnemonicParsing="false" text="म्हशीच्या दुधाचे दर बदल" />
+                                        <MenuItem fx:id="viewbuffalorate1" mnemonicParsing="false" text="म्हशीच्या दुधाचे दर" visible="false" />
+                                    </items>
+                                </Menu>
+
+                                <Menu fx:id="report" mnemonicParsing="false" style="-fx-font-weight: bold;" text="अहवाल">
+                                    <items>
+                                        <MenuItem fx:id="milkreports" mnemonicParsing="false" text="गाईचे दूध खरेदीचे अहवाल" />
+                                        <MenuItem fx:id="milkreports1" mnemonicParsing="false" text="म्हशीच्या दुधाच्या खरेदीचे अहवाल" />
+                                        <MenuItem fx:id="viewallmilkpurchase" mnemonicParsing="false" text="सर्व दूध खरेदी अहवाल पहा" visible="false" />
+                                        <MenuItem fx:id="milksalesreport" mnemonicParsing="false" text="दूध विक्री अहवाल" />
+                                    </items>
+                                </Menu>
+
+                                <Menu fx:id="expense" mnemonicParsing="false" style="-fx-font-weight: bold;" text="खर्च">
+                                    <items>
+                                        <MenuItem fx:id="addexpanses" mnemonicParsing="false" text="खर्च जोडा" />
+                                        <MenuItem fx:id="viewexpanses" mnemonicParsing="false" text="खर्च पहा" />
+                                    </items>
+                                </Menu>
+
+                                <Menu fx:id="master" mnemonicParsing="false" style="-fx-font-weight: bold;" text="मास्टर बिल">
+                                    <items>
+                                        <MenuItem fx:id="masterbill" mnemonicParsing="false" text="मास्टर बिल म्हैस " />
+                                        <MenuItem fx:id="masterbill2" mnemonicParsing="false" text="मास्टर बिल गाय" />
+                                    </items>
+                                </Menu>
+
+                                <Menu mnemonicParsing="false" style="-fx-font-weight: bold;" text="संदेश" visible="false">
+                                    <items>
+                                        <MenuItem fx:id="sendmsg" mnemonicParsing="false" text="संदेश पाठवा" />
+                                        <MenuItem fx:id="viewmsg" mnemonicParsing="false" text="पाठवलेले संदेश पहा" />
+                                    </items>
+                                </Menu>
+
+                                <Menu fx:id="helpp" mnemonicParsing="false" style="-fx-font-weight: bold;" text="मदत">
+                                    <items>
+                                        <MenuItem fx:id="notepad" mnemonicParsing="false" text="नोटपॅड" />
+                                        <MenuItem fx:id="calculator" mnemonicParsing="false" text="गणनयंत्र" />
+                                    </items>
+                                </Menu>
+                            </menus>
+                            <BorderPane.margin>
+                                <Insets />
+                            </BorderPane.margin>
+                        </MenuBar>
+                    </top>
+                </BorderPane>
+            </items>
+        </SplitPane>
+    </top>
+    <left>
+        <VBox prefHeight="535.0" prefWidth="199.0" BorderPane.alignment="CENTER">
+            <children>
+                <Pane fx:id="leftPane" prefHeight="670.0" prefWidth="199.0" style="-fx-background-color: #faebd7;">
+                    <children>
+                        <Label fx:id="lblBajarang" alignment="CENTER" contentDisplay="CENTER" layoutX="6.0" layoutY="11.0" prefHeight="50.0" prefWidth="185.0" text="बजरंग" textAlignment="CENTER" textFill="#044b85" underline="true" wrapText="true">
+                            <font>
+                                <Font name="Rockwell" size="40.0" />
+                            </font>
+                            <effect>
+                                <Bloom threshold="1.0" />
+                            </effect>
+                        </Label>
+                        <Separator layoutX="196.0" layoutY="-1.0" orientation="VERTICAL" prefHeight="367.0" prefWidth="0.0" />
+                        <Separator layoutX="2.0" layoutY="114.0" prefHeight="3.0" prefWidth="195.0" />
+                        <Separator layoutX="1.0" layoutY="365.0" prefHeight="4.0" prefWidth="197.0" />
+                  <Button fx:id="btnCowMilkPurchase" focusTraversable="false" layoutX="32.0" layoutY="133.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="135.0" text="गायीच्या दुधाची खरेदी" />
+                  <Button fx:id="btnMilkSale" focusTraversable="false" layoutX="32.0" layoutY="250.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="135.0" text="दुधाची विक्री" />
+                  <Button fx:id="btnBuffaloMilkPurchase" focusTraversable="false" layoutX="32.0" layoutY="192.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="135.0" text="म्हशीच्या दुधाची खरेदी" />
+                  <Label fx:id="lblDairy" alignment="CENTER" contentDisplay="CENTER" layoutX="6.0" layoutY="62.0" prefHeight="56.0" prefWidth="185.0" text="डेअरी" textAlignment="CENTER" textFill="#044b85" underline="true" wrapText="true">
+                     <font>
+                        <Font name="Rockwell" size="39.0" />
+                     </font>
+                     <effect>
+                        <Bloom threshold="1.0" />
+                     </effect>
+                  </Label>
+                  <Button fx:id="btnClearalltab" focusTraversable="false" layoutX="32.0" layoutY="308.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="135.0" text="सर्व बंद करा" />
+                    </children>
+                    <opaqueInsets>
+                        <Insets />
+                    </opaqueInsets>
+                </Pane>
+            </children>
+        </VBox>
+    </left>
+</BorderPane>

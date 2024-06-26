@@ -1,0 +1,413 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.6.0.final using JasperReports Library version 6.6.0  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="Blank_A4" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="10" bottomMargin="10" uuid="37428f7a-fc3d-4a1a-93ed-fae155dc6d7f">
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="One Empty Record"/>
+	<subDataset name="Dataset" uuid="a2dc9cc9-6a86-453d-a00e-8230cb3a6166">
+		<queryString>
+			<![CDATA[]]>
+		</queryString>
+	</subDataset>
+	<parameter name="sdate" class="java.lang.String" isForPrompting="false"/>
+	<parameter name="edate" class="java.lang.String" isForPrompting="false"/>
+	<parameter name="cno" class="java.lang.String" isForPrompting="false"/>
+	<parameter name="cname" class="java.lang.String" isForPrompting="false"/>
+	<parameter name="ttlltr" class="java.lang.String" isForPrompting="false"/>
+	<parameter name="ttlamount" class="java.lang.String" isForPrompting="false"/>
+	<parameter name="hafta" class="java.lang.String" isForPrompting="false"/>
+	<parameter name="paid" class="java.lang.String" isForPrompting="false"/>
+	<parameter name="bttl" class="java.lang.String" isForPrompting="false"/>
+	<parameter name="cttl" class="java.lang.String" isForPrompting="false"/>
+	<field name="srno" class="java.lang.Integer">
+		<fieldDescription><![CDATA[srno]]></fieldDescription>
+	</field>
+	<field name="strdate" class="java.lang.String">
+		<fieldDescription><![CDATA[strdate]]></fieldDescription>
+	</field>
+	<field name="bltr" class="java.lang.Double">
+		<fieldDescription><![CDATA[bltr]]></fieldDescription>
+	</field>
+	<field name="bfat" class="java.lang.Double">
+		<fieldDescription><![CDATA[bfat]]></fieldDescription>
+	</field>
+	<field name="bgfat" class="java.lang.Double">
+		<fieldDescription><![CDATA[bgfat]]></fieldDescription>
+	</field>
+	<field name="bttl" class="java.lang.Double">
+		<fieldDescription><![CDATA[bttl]]></fieldDescription>
+	</field>
+	<field name="cltr" class="java.lang.Double">
+		<fieldDescription><![CDATA[cltr]]></fieldDescription>
+	</field>
+	<field name="cfat" class="java.lang.Double">
+		<fieldDescription><![CDATA[cfat]]></fieldDescription>
+	</field>
+	<field name="cgfat" class="java.lang.Double">
+		<fieldDescription><![CDATA[cgfat]]></fieldDescription>
+	</field>
+	<field name="cttl" class="java.lang.Double">
+		<fieldDescription><![CDATA[cttl]]></fieldDescription>
+	</field>
+	<background>
+		<band height="822" splitType="Stretch">
+			<frame>
+				<reportElement positionType="FixRelativeToBottom" x="0" y="0" width="555" height="822" uuid="c8c39b3d-5ac0-40f9-a80f-fa8a6fac67fb"/>
+				<box>
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+			</frame>
+		</band>
+	</background>
+	<title>
+		<band height="165" splitType="Stretch">
+			<frame>
+				<reportElement x="0" y="0" width="555" height="164" uuid="b689a782-fbb6-4261-8706-163b82722b78"/>
+				<box>
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<staticText>
+					<reportElement x="91" y="128" width="464" height="18" uuid="eadf40ca-d9af-4a08-a31a-cc47290f97ea"/>
+					<box>
+						<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+						<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+						<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+						<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					</box>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font size="14"/>
+					</textElement>
+					<text><![CDATA[गाय]]></text>
+				</staticText>
+				<textField>
+					<reportElement x="107" y="104" width="439" height="22" uuid="777fa9a1-5db7-4e8b-ba4e-594353e49bcb"/>
+					<textElement>
+						<font size="14"/>
+					</textElement>
+					<textFieldExpression><![CDATA[""+$P{cname}]]></textFieldExpression>
+				</textField>
+				<staticText>
+					<reportElement x="2" y="55" width="551" height="27" uuid="0053518b-eb98-40c8-bb0b-c7ad56a6de70"/>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font size="14"/>
+					</textElement>
+					<text><![CDATA[Mob.: ९९२३८६८५१२, Email : dhangarrc98@gmail.com]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="2" y="22" width="551" height="27" uuid="194ab71a-db68-49dc-b1e3-924ddee22505"/>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font size="14"/>
+					</textElement>
+					<text><![CDATA[ शाखा : रताळे ता.पारोळा]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="1" y="40" width="551" height="27" uuid="912ff02f-5fca-4319-8d7d-7cd266eab06b"/>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font size="14"/>
+					</textElement>
+					<text><![CDATA[जि. जळगाव]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="0" y="128" width="22" height="36" uuid="06ff42fe-702c-4b54-9f4a-438bf82b0fca"/>
+					<box>
+						<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+						<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+						<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+						<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					</box>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font size="10"/>
+					</textElement>
+					<text><![CDATA[Sr.No.]]></text>
+				</staticText>
+			</frame>
+			<staticText>
+				<reportElement stretchType="RelativeToTallestObject" x="310" y="146" width="140" height="18" uuid="c24a7bab-ee15-4238-98e2-5d036890b1f1"/>
+				<box>
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Bottom">
+					<font size="14"/>
+				</textElement>
+				<text><![CDATA[एनएफएस]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="1" width="552" height="30" uuid="f6b1676f-832a-46f9-b55b-cd6f1bfa8b7d"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="23" isBold="false"/>
+				</textElement>
+				<text><![CDATA[बजरंग डेअरी]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="185" y="82" width="108" height="21" uuid="0228cc98-b5f1-475c-9e55-5b0fbd2dcc97"/>
+				<textElement>
+					<font size="14" isBold="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA["दुध बिल कालावधी"]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="293" y="82" width="124" height="21" uuid="150d36b3-b104-41ee-861f-2af8706fc3b2"/>
+				<textElement>
+					<font size="14" isBold="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA["दिनांक : "+$P{sdate}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="420" y="82" width="18" height="21" uuid="0a72b12a-c639-4d10-aabf-1e792900f689"/>
+				<textElement>
+					<font size="14"/>
+				</textElement>
+				<text><![CDATA[ते]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="4" y="104" width="100" height="22" uuid="4e29d0dd-689c-4497-8fc1-e1ddbc3b7660"/>
+				<textElement>
+					<font size="14"/>
+				</textElement>
+				<textFieldExpression><![CDATA["कोड नं. "+$P{cno}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="22" y="128" width="69" height="36" uuid="03f56764-ba75-4029-a621-4ab69f332021"/>
+				<box>
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="14"/>
+				</textElement>
+				<text><![CDATA[दिनांक]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="92" y="146" width="98" height="18" uuid="e4a79408-a3db-48c7-b505-2010c0c2aa45"/>
+				<box>
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="14"/>
+				</textElement>
+				<text><![CDATA[लिटर]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="190" y="146" width="120" height="18" uuid="4ed66169-f507-4149-a54f-24d8c02917f7"/>
+				<box>
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="14"/>
+				</textElement>
+				<text><![CDATA[फॅट]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="450" y="146" width="105" height="18" uuid="192e5810-7ec1-459b-adde-b550718de465"/>
+				<box>
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="14"/>
+				</textElement>
+				<text><![CDATA[रक्कम]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="435" y="82" width="115" height="21" uuid="c54286b7-3c69-4929-ba94-40408a6ad7c4"/>
+				<textElement>
+					<font size="14"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{edate}]]></textFieldExpression>
+			</textField>
+		</band>
+	</title>
+	<detail>
+		<band height="20" splitType="Prevent">
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement stretchType="RelativeToTallestObject" mode="Opaque" x="22" y="0" width="69" height="20" backcolor="#FFFFFF" uuid="5d0379ac-a36b-45fe-a547-2edbf0c0261a"/>
+				<box>
+					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{strdate}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement mode="Opaque" x="92" y="0" width="98" height="20" backcolor="#FFFFFF" uuid="5ff41f1a-7962-4253-8ec5-2d47b2937231"/>
+				<box>
+					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{cltr}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement mode="Opaque" x="191" y="0" width="119" height="20" backcolor="#FFFFFF" uuid="5ab15cee-7b42-4bbf-b936-c4f30ae1652d"/>
+				<box>
+					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{cfat}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement mode="Opaque" x="310" y="0" width="140" height="20" backcolor="#FFFFFF" uuid="ab43bdac-e9f3-47e5-b392-dc225553ee9a"/>
+				<box>
+					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{cgfat}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement mode="Opaque" x="450" y="0" width="105" height="20" backcolor="#FFFFFF" uuid="ca0e3928-5f19-4d0d-ada6-29e50f596060"/>
+				<box>
+					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{cttl}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement stretchType="RelativeToTallestObject" mode="Opaque" x="0" y="0" width="22" height="20" backcolor="#FFFFFF" uuid="e1822881-937e-41e1-937c-a2e3fb2ad90a"/>
+				<box>
+					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{srno}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<pageFooter>
+		<band height="139" splitType="Stretch">
+			<frame>
+				<reportElement x="0" y="25" width="555" height="114" uuid="cf897d98-c51b-4b2b-932c-bca885a35194"/>
+				<box>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textField isBlankWhenNull="true">
+					<reportElement x="379" y="27" width="176" height="25" uuid="f6f8728b-d5f4-41cc-8411-dda518ef58d0"/>
+					<box>
+						<leftPen lineWidth="1.0"/>
+						<bottomPen lineWidth="1.0"/>
+						<rightPen lineWidth="1.0"/>
+					</box>
+					<textElement verticalAlignment="Middle">
+						<font size="14"/>
+						<paragraph leftIndent="2"/>
+					</textElement>
+					<textFieldExpression><![CDATA["एकूण  रक्कम  : "+$P{ttlamount}]]></textFieldExpression>
+				</textField>
+				<staticText>
+					<reportElement x="20" y="4" width="339" height="94" uuid="c6bc371b-c811-4789-ba7e-4c6fdc982417"/>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font fontName="Serif" size="22"/>
+					</textElement>
+					<text><![CDATA[धन्यवाद]]></text>
+				</staticText>
+				<textField isBlankWhenNull="true">
+					<reportElement x="379" y="1" width="176" height="25" uuid="b265eccf-3e0f-4aea-9276-eb7f8f2b646d"/>
+					<box>
+						<leftPen lineWidth="1.0"/>
+						<bottomPen lineWidth="1.0"/>
+						<rightPen lineWidth="1.0"/>
+					</box>
+					<textElement verticalAlignment="Middle">
+						<font size="14"/>
+						<paragraph leftIndent="2"/>
+					</textElement>
+					<textFieldExpression><![CDATA["एकूण ज.फॅट : "+$P{ttlltr}]]></textFieldExpression>
+				</textField>
+				<textField isBlankWhenNull="true">
+					<reportElement x="379" y="52" width="176" height="25" uuid="590875b5-16e2-46a0-993f-c59ea18ad01b"/>
+					<box>
+						<leftPen lineWidth="1.0"/>
+						<bottomPen lineWidth="1.0"/>
+						<rightPen lineWidth="1.0"/>
+					</box>
+					<textElement verticalAlignment="Middle">
+						<font size="14"/>
+						<paragraph leftIndent="2"/>
+					</textElement>
+					<textFieldExpression><![CDATA["हफ्ता कपात  : "+$P{hafta}]]></textFieldExpression>
+				</textField>
+				<textField isBlankWhenNull="true">
+					<reportElement x="379" y="78" width="176" height="25" uuid="4bfeb19e-f70e-46ab-92ce-454ffe3e45af"/>
+					<box>
+						<leftPen lineWidth="1.0"/>
+						<bottomPen lineWidth="1.0"/>
+						<rightPen lineWidth="1.0"/>
+					</box>
+					<textElement verticalAlignment="Middle">
+						<font size="14"/>
+						<paragraph leftIndent="2"/>
+					</textElement>
+					<textFieldExpression><![CDATA["निव्वळ रक्कम : "+$P{paid}]]></textFieldExpression>
+				</textField>
+			</frame>
+			<textField isBlankWhenNull="true">
+				<reportElement x="0" y="0" width="91" height="25" uuid="f02882d0-eae4-4adf-a7dd-c67e6f870cd1"/>
+				<box>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="290" y="0" width="265" height="25" uuid="769a5e87-b406-474e-a291-88f4764deabe"/>
+				<box>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="12"/>
+					<paragraph leftIndent="10"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{cttl}]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageFooter>
+</jasperReport>

@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<StackPane alignment="TOP_CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="650.0" prefWidth="1019.0" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.BuffaloRate">
+    <children>
+        <VBox alignment="TOP_CENTER" prefHeight="200.0" prefWidth="100.0" StackPane.alignment="TOP_CENTER">
+            <children>
+                <Label fx:id="lblchangerate" alignment="CENTER" prefHeight="38.0" prefWidth="436.0" text="म्हशीच्या दुधाचे दर बदल">
+                    <VBox.margin>
+                        <Insets bottom="20.0" />
+                    </VBox.margin>
+                    <font>
+                        <Font name="System Bold" size="22.0" />
+                    </font>
+                </Label>
+                <Pane prefHeight="776.0" prefWidth="1183.0">
+                    <children>
+                        <Label fx:id="lbldegree" alignment="CENTER_RIGHT" disable="true" layoutX="137.0" layoutY="334.0" opacity="0.0" prefHeight="21.0" prefWidth="86.0" text="Degree :" visible="false">
+                            <font>
+                                <Font size="15.0" />
+                            </font>
+                        </Label>
+                        <Label fx:id="lblfat" alignment="CENTER_RIGHT" disable="true" layoutX="146.0" layoutY="378.0" opacity="0.0" prefHeight="21.0" prefWidth="77.0" text="Fat :" visible="false">
+                            <font>
+                                <Font size="15.0" />
+                            </font>
+                        </Label>
+                        <Label fx:id="lblnewrate" alignment="CENTER_RIGHT" layoutX="130.0" layoutY="114.0" prefHeight="21.0" prefWidth="94.0" text="नवीन दर :">
+                            <font>
+                                <Font size="15.0" />
+                            </font>
+                        </Label>
+                        <TextField fx:id="degree" disable="true" layoutX="235.0" layoutY="329.0" opacity="0.0" prefHeight="30.0" prefWidth="252.0" promptText="Degree" visible="false" />
+                        <TextField fx:id="fat" disable="true" layoutX="236.0" layoutY="374.0" opacity="0.0" prefHeight="30.0" prefWidth="252.0" promptText="Fat" visible="false" />
+                        <TextField fx:id="newrate" layoutX="237.0" layoutY="110.0" prefHeight="31.0" prefWidth="202.0" promptText="नवीन दर" />
+                        <Button fx:id="add" layoutX="245.0" layoutY="186.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="82.0" text="जोडा">
+                            <font>
+                                <Font size="15.0" />
+                            </font>
+                        </Button>
+                        <Button fx:id="reset" layoutX="367.0" layoutY="186.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="90.0" text="पुसून टाका ">
+                            <font>
+                                <Font size="15.0" />
+                            </font>
+                        </Button>
+                        <TextField fx:id="currentrate" editable="false" focusTraversable="false" layoutX="675.0" layoutY="72.0" prefHeight="30.0" prefWidth="189.0" promptText="सध्याचा दर" />
+                        <TextField fx:id="newrate1" layoutX="676.0" layoutY="115.0" prefHeight="30.0" prefWidth="189.0" promptText="नवीन दर" />
+                        <Button fx:id="add1" layoutX="650.0" layoutY="195.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="90.0" text="जोडा">
+                            <font>
+                                <Font size="15.0" />
+                            </font>
+                        </Button>
+                        <Button fx:id="reset1" layoutX="766.0" layoutY="196.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="90.0" text="पुसून टाका ">
+                            <font>
+                                <Font size="15.0" />
+                            </font>
+                        </Button>
+                        <Label fx:id="lblcurprice" alignment="CENTER_RIGHT" layoutX="122.0" layoutY="72.0" prefHeight="21.0" prefWidth="103.0" text="सध्याचा दर :">
+                            <font>
+                                <Font size="15.0" />
+                            </font>
+                        </Label>
+                        <TextField fx:id="crate" editable="false" focusTraversable="false" layoutX="238.0" layoutY="68.0" prefHeight="30.0" prefWidth="126.0" promptText="सध्याचा दर" />
+                        <Label fx:id="lblrspl1" layoutX="371.0" layoutY="76.0" prefHeight="16.0" prefWidth="56.0" text="Rs\lit.">
+                            <font>
+                                <Font size="15.0" />
+                            </font>
+                        </Label>
+                        <Label fx:id="lblpurchase" alignment="CENTER" layoutX="234.0" layoutY="16.0" prefHeight="30.0" prefWidth="126.0" text="खरेदी" underline="true">
+                            <font>
+                                <Font name="System Bold" size="20.0" />
+                            </font>
+                        </Label>
+                        <Label fx:id="lblsale" alignment="CENTER" layoutX="677.0" layoutY="16.0" prefHeight="31.0" prefWidth="90.0" text="विक्री" underline="true">
+                            <font>
+                                <Font name="System Bold" size="20.0" />
+                            </font>
+                        </Label>
+                        <Label fx:id="lblcurprice1" alignment="CENTER_RIGHT" layoutX="564.0" layoutY="74.0" prefHeight="21.0" prefWidth="98.0" text="सध्याचा दर :">
+                            <font>
+                                <Font size="15.0" />
+                            </font>
+                        </Label>
+                        <Label fx:id="lblnewrate1" alignment="CENTER_RIGHT" layoutX="564.0" layoutY="119.0" prefHeight="21.0" prefWidth="98.0" text="नवीन दर :">
+                            <font>
+                                <Font size="15.0" />
+                            </font>
+                        </Label>
+                        <Label fx:id="lblrspl3" layoutX="872.0" layoutY="79.0" prefHeight="16.0" prefWidth="42.0" text="Rs\lit.">
+                            <font>
+                                <Font size="15.0" />
+                            </font>
+                        </Label>
+                        <Label fx:id="lblrspl4" layoutX="873.0" layoutY="123.0" prefHeight="16.0" prefWidth="42.0" text="Rs\lit.">
+                            <font>
+                                <Font size="15.0" />
+                            </font>
+                        </Label>
+                        <Label fx:id="warn" alignment="CENTER" layoutX="116.0" layoutY="155.0" prefHeight="20.0" prefWidth="409.0" textFill="#ee0707">
+                            <font>
+                                <Font size="14.0" />
+                            </font>
+                        </Label>
+                        <Label fx:id="warn1" alignment="CENTER" layoutX="575.0" layoutY="159.0" prefHeight="20.0" prefWidth="350.0" textFill="#ee0707">
+                            <font>
+                                <Font size="14.0" />
+                            </font>
+                        </Label>
+                        <Label fx:id="lblrspl2" layoutX="448.0" layoutY="120.0" prefHeight="16.0" prefWidth="56.0" text="Rs\lit.">
+                            <font>
+                                <Font size="15.0" />
+                            </font>
+                        </Label>
+                    </children>
+                </Pane>
+            </children>
+            <StackPane.margin>
+                <Insets top="20.0" />
+            </StackPane.margin>
+        </VBox>
+    </children>
+</StackPane>
