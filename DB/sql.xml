@@ -1,0 +1,537 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+
+
+    <class name="DB.User" table="uuser">
+        <id name="name">
+            <column name="name" sql-type="varchar(50)" not-null="true"/>
+        </id>
+        <property name="pass">
+            <column name="pass" sql-type="varchar(50)" not-null="true"/>
+        </property>
+        <property name="qname">
+            <column name="qname" sql-type="text"/>
+        </property>
+        <property name="ans">
+            <column name="ans" sql-type="varchar(50)"/>
+        </property>
+        <property name="date">
+            <column name="date" sql-type="date"/>
+        </property>
+        <property name="time">
+            <column name="time" sql-type="time"/>
+        </property>
+    </class>
+
+    <class name="DB.Customer" table="customer">
+        <id name="id">
+            <column name="id" sql-type="bigint"/>
+            <generator class="native"/>
+        </id>
+        <property name="date">
+            <column name="date" sql-type="date"/>
+        </property>
+        <property name="sno">
+            <column name="sno" sql-type="varchar(200)"/>
+        </property>
+        <property name="name">
+            <column name="name" sql-type="varchar(200)"/>
+        </property>
+        <property name="addr">
+            <column name="addr" sql-type="text"/>
+        </property>
+        <property name="accno">
+            <column name="accno" sql-type="varchar(100)"/>
+        </property>
+        <property name="ifsc">
+            <column name="ifsc" sql-type="varchar(50)"/>
+        </property>
+        <property name="mob">
+            <column name="mob" sql-type="varchar(30)"/>
+        </property>
+        <property name="pending">
+            <column name="pending" sql-type="numeric(12,2)" default="0.0"/>
+        </property>
+        <property name="deposite">
+            <column name="deposite" sql-type="numeric(12,2)" default="0.0"/>
+        </property>
+        <property name="hafta">
+            <column name="hafta" sql-type="numeric(12,2)" default="0.0"/>
+        </property>
+        <property name="status">
+            <column name="status" sql-type="int" default="1"/>
+        </property>
+        <property name="d">
+            <column name="d" sql-type="int" default="1"/>
+        </property>
+    </class>
+
+    <class name="DB.CustomerPaymentCredit" table="customerpaymentcredit">
+        <id name="id">
+            <column name="id" sql-type="bigint"/>
+            <generator class="native"/>
+        </id>
+        <property name="date">
+            <column name="date" sql-type="date"/>
+        </property>
+        <property name="remark">
+            <column name="remark" sql-type="varchar(300)"/>
+        </property>
+        <property name="amount">
+            <column name="amount" sql-type="numeric(12,2)" default="0.0"/>
+        </property>
+        <property name="credit">
+            <column name="credit" sql-type="numeric(12,2)" default="0.0"/>
+        </property>
+        <property name="deposite">
+            <column name="deposite" sql-type="numeric(12,2)" default="0.0"/>
+        </property>
+        <property name="d">
+            <column name="d" sql-type="int" default="1"/>
+        </property>
+        <many-to-one name="customer" class="DB.Customer" column="cid" cascade="none" not-null="false"/>
+    </class>
+
+    <class name="DB.CustomerPaymentDeposite" table="customerpaymentdeposite">
+        <id name="id">
+            <column name="id" sql-type="bigint"/>
+            <generator class="native"/>
+        </id>
+        <property name="date">
+            <column name="date" sql-type="date"/>
+        </property>
+        <property name="remark">
+            <column name="remark" sql-type="varchar(300)"/>
+        </property>
+        <property name="amount">
+            <column name="amount" sql-type="numeric(12,2)" default="0.0"/>
+        </property>
+        <property name="credit">
+            <column name="credit" sql-type="numeric(12,2)" default="0.0"/>
+        </property>
+        <property name="deposite">
+            <column name="deposite" sql-type="numeric(12,2)" default="0.0"/>
+        </property>
+        <property name="d">
+            <column name="d" sql-type="int" default="1"/>
+        </property>
+        <many-to-one name="customer" class="DB.Customer" column="cid" cascade="none" not-null="false"/>
+        <many-to-one name="bill" class="DB.Bill" column="bid" cascade="none" not-null="false"/>
+    </class>
+
+    <class name="DB.BuffaloMilk" table="buffalomilk">
+        <id name="id">
+            <column name="id" sql-type="bigint"/>
+            <generator class="native"/>
+        </id>
+        <property name="me">
+            <column name="me" sql-type="int"/>
+        </property>
+        <property name="date">
+            <column name="date" sql-type="date"/>
+        </property>
+        <property name="time">
+            <column name="time" sql-type="time"/>
+        </property>
+        <property name="cdegree">
+            <column name="cdegree" sql-type="numeric(12,2)"/>
+        </property>
+        <property name="cfat">
+            <column name="cfat" sql-type="numeric(12,2)"/>
+        </property>
+        <property name="crate">
+            <column name="crate" sql-type="numeric(12,2)"/>
+        </property>
+        <property name="degree">
+            <column name="degree" sql-type="numeric(12,2)"/>
+        </property>
+        <property name="fat">
+            <column name="fat" sql-type="numeric(12,2)"/>
+        </property>
+        <property name="gfat">
+            <column name="gfat" sql-type="numeric(12,2)"/>
+        </property>
+        <property name="rate">
+            <column name="rate" sql-type="numeric(12,2)"/>
+        </property>
+        <property name="totalmilk">
+            <column name="totalmilk" sql-type="numeric(12,2)"/>
+        </property>
+        <property name="totalamt">
+            <column name="totalamt" sql-type="numeric(12,2)"/>
+        </property>
+        <property name="d">
+            <column name="d" sql-type="int" default="1"/>
+        </property>
+        <many-to-one name="customer" class="DB.Customer" column="cid" not-null="false" cascade="none"/>
+    </class>
+
+    <class name="DB.CowMilk" table="cowmilk">
+        <id name="id">
+            <column name="id" sql-type="bigint"/>
+            <generator class="native"/>
+        </id>
+        <property name="me">
+            <column name="me" sql-type="int"/>
+        </property>
+        <property name="date">
+            <column name="date" sql-type="date"/>
+        </property>
+        <property name="time">
+            <column name="time" sql-type="time"/>
+        </property>
+        <property name="cdegree">
+            <column name="cdegree" sql-type="numeric(12,2)"/>
+        </property>
+        <property name="cfat">
+            <column name="cfat" sql-type="numeric(12,2)"/>
+        </property>
+        <property name="crate">
+            <column name="crate" sql-type="numeric(12,2)"/>
+        </property>
+        <property name="degree">
+            <column name="degree" sql-type="numeric(12,2)"/>
+        </property>
+        <property name="fat">
+            <column name="fat" sql-type="numeric(12,2)"/>
+        </property>
+        <property name="gfat">
+            <column name="gfat" sql-type="numeric(12,2)"/>
+        </property>
+        <property name="rate">
+            <column name="rate" sql-type="numeric(12,2)"/>
+        </property>
+        <property name="totalmilk">
+            <column name="totalmilk" sql-type="numeric(12,2)"/>
+        </property>
+        <property name="totalamt">
+            <column name="totalamt" sql-type="numeric(12,2)"/>
+        </property>
+        <property name="d">
+            <column name="d" sql-type="int" default="1"/>
+        </property>
+        <property name="snf">
+            <column name="snf" sql-type="numeric(12,2)"/>
+        </property>
+        <many-to-one name="customer" class="DB.Customer" column="cid" not-null="false" cascade="none"/>
+    </class>
+
+    <class name="DB.Rate" table="rate">
+        <id name="id">
+            <column name="id" sql-type="bigint"/>
+            <generator class="native"/>
+        </id>
+        <property name="cur">
+            <column name="cur" sql-type="int"/>
+        </property>
+        <property name="name">
+            <column name="name" sql-type="varchar(100)"/>
+        </property>
+        <property name="sdate">
+            <column name="sdate" sql-type="date"/>
+        </property>
+        <property name="edate">
+            <column name="edate" sql-type="date"/>
+        </property>
+        <property name="orate">
+            <column name="orate" sql-type="numeric(12,2)"/>
+        </property>
+        <property name="nrate">
+            <column name="nrate" sql-type="numeric(12,2)"/>
+        </property>
+        <property name="osrate">
+            <column name="osrate" sql-type="numeric(12,2)"/>
+        </property>
+        <property name="nsrate">
+            <column name="nsrate" sql-type="numeric(12,2)"/>
+        </property>
+        <property name="odegree">
+            <column name="odegree" sql-type="numeric(12,2)"/>
+        </property>
+        <property name="ndegree">
+            <column name="ndegree" sql-type="numeric(12,2)"/>
+        </property>
+        <property name="ofat">
+            <column name="ofat" sql-type="numeric(12,2)"/>
+        </property>
+        <property name="nfat">
+            <column name="nfat" sql-type="numeric(12,2)"/>
+        </property>
+        <property name="d">
+            <column name="d" sql-type="int" default="1"/>
+        </property>
+
+    </class>
+
+    <class name="DB.CowRate" table="cowrate">
+        <id name="id">
+            <column name="id" sql-type="bigint"/>
+            <generator class="native"/>
+        </id>
+        <property name="snf">
+            <column name="snf" sql-type="numeric(12,2)"/>
+        </property>
+        <property name="rate">
+            <column name="rate" sql-type="numeric(12,2)"/>
+        </property>
+        <property name="fat">
+            <column name="fat" sql-type="numeric(12,2)"/>
+        </property>
+        <property name="d">
+            <column name="d" sql-type="int" default="1"/>
+        </property>
+    </class>
+
+    <class name="DB.temp1" table="temp1">
+        <id name="id">
+            <column name="id" sql-type="bigint"/>
+            <generator class="native"/>
+        </id>
+        <property name="snf">
+            <column name="snf" sql-type="numeric(12,2)" default="0.0"/>
+        </property>
+        <property name="rate">
+            <column name="rate" sql-type="numeric(12,2)" default="0.0"/>
+        </property>
+        <property name="fat">
+            <column name="fat" sql-type="numeric(12,2)" default="0.0"/>
+        </property>
+
+        <property name="d">
+            <column name="d" sql-type="int" default="1"/>
+        </property>
+    </class>
+
+
+    <class name="DB.BuffaloRate" table="buffalorate">
+        <id name="id">
+            <column name="id" sql-type="bigint"/>
+            <generator class="native"/>
+        </id>
+        <property name="fat">
+            <column name="fat" sql-type="numeric(12,2)"/>
+        </property>
+        <property name="rate">
+            <column name="rate" sql-type="numeric(12,2)"/>
+        </property>
+        <property name="d">
+            <column name="d" sql-type="int" default="1"/>
+        </property>
+    </class>
+
+    <class name="DB.Message" table="message">
+        <id name="id">
+            <column name="id" sql-type="bigint"/>
+            <generator class="native"/>
+        </id>
+        <property name="mobile">
+            <column name="mobile" sql-type="bigint"/>
+        </property>
+        <property name="textmsg">
+            <column name="textmsg" sql-type="varchar(500)"/>
+        </property>
+        <property name="date">
+            <column name="date" sql-type="date"/>
+        </property>
+        <property name="time">
+            <column name="time" sql-type="time"/>
+        </property>
+        <property name="d">
+            <column name="d" sql-type="int" default="1"/>
+        </property>
+    </class>
+
+    <class name="DB.MilkSale" table="milksale">
+        <id name="id">
+            <column name="id" sql-type="int"/>
+            <generator class="native"/>
+        </id>
+        <property name="me">
+            <column name="me" sql-type="int"/>
+        </property>
+        <property name="type">
+            <column name="type" sql-type="varchar(10)"/>
+        </property>
+        <property name="cname">
+            <column name="cname" sql-type="varchar(50)"/>
+        </property>
+        <property name="rate">
+            <column name="rate" sql-type="numeric(12,2)"/>
+        </property>
+        <property name="total">
+            <column name="total" sql-type="numeric(12,2)"/>
+        </property>
+        <property name="ttlmilk">
+            <column name="ttlmilk" sql-type="numeric(12,2)"/>
+        </property>
+        <property name="date">
+            <column name="date" sql-type="date"/>
+        </property>
+        <property name="time">
+            <column name="time" sql-type="time"/>
+        </property>
+        <property name="d">
+            <column name="d" sql-type="int" default="1"/>
+        </property>
+    </class>
+
+    <class name="DB.Details" table="details">
+        <id name="id">
+            <column name="id" sql-type="bigint"/>
+            <generator class="native"/>
+        </id>
+        <property name="left">
+            <column name="leftcolor" sql-type="varchar(20)" />
+        </property>
+        <property name="center">
+            <column name="centercolor" sql-type="varchar(20)" />
+        </property>
+        <property name="top">
+            <column name="topcolor" sql-type="varchar(20)" />
+        </property>
+        <property name="label">
+            <column name="labelcolor" sql-type="varchar(20)" />
+        </property>
+        <property name="d">
+            <column name="d" sql-type="int" default="1"/>
+        </property>
+    </class>
+
+    <class name="DB.Expense" table="expense">
+        <id name="id">
+            <column name="id" sql-type="bigint"/>
+            <generator class="native"/>
+        </id>
+        <property name="name">
+            <column name="name" sql-type="varchar(200)"/>
+        </property>
+        <property name="date">
+            <column name="date" sql-type="date"/>
+        </property>
+        <property name="ttl">
+            <column name="ttl" sql-type="numeric(12,2)" default="0.0"/>
+        </property>
+        <property name="d">
+            <column name="d" sql-type="int" default="1"/>
+        </property>
+    </class>
+
+    <class name="DB.Bill" table="bill">
+        <id name="id">
+            <column name="id" sql-type="bigint"/>
+            <generator class="native"/>
+        </id>
+        <property name="bno">
+            <column name="bno" sql-type="varchar(50)" />
+        </property>
+        <property name="date">
+            <column name="date" sql-type="date"/>
+        </property>
+        <property name="sdate">
+            <column name="sdate" sql-type="date"/>
+        </property>
+        <property name="edate">
+            <column name="edate" sql-type="date"/>
+        </property>
+        <property name="bttlltr">
+            <column name="bttlltr" sql-type="numeric(12,2)"/>
+        </property>
+        <property name="bttlgfat">
+            <column name="bttlgfat" sql-type="numeric(12,2)"/>
+        </property>
+        <property name="bttlamt">
+            <column name="bttlamt" sql-type="numeric(12,2)"/>
+        </property>
+        <property name="cttlltr">
+            <column name="cttlltr" sql-type="numeric(12,2)"/>
+        </property>
+        <property name="cttlgfat">
+            <column name="cttlgfat" sql-type="numeric(12,2)"/>
+        </property>
+        <property name="cttlamt">
+            <column name="cttlamt" sql-type="numeric(12,2)"/>
+        </property>
+        <property name="ttlltr">
+            <column name="ttlltr" sql-type="numeric(12,2)"/>
+        </property>
+        <property name="total">
+            <column name="total" sql-type="numeric(12,2)"/>
+        </property>
+        <property name="hafta">
+            <column name="hafta" sql-type="numeric(12,2)"/>
+        </property>
+        <property name="paid">
+            <column name="paid" sql-type="numeric(12,2)"/>
+        </property>
+        <property name="cno">
+            <column name="cno" sql-type="varchar(1000)"/>
+        </property>
+        <property name="d">
+            <column name="d" sql-type="int" default="1"/>
+        </property>
+        <many-to-one name="customer" column="cid" class="DB.Customer" cascade="none" not-null="false"/>
+    </class>
+
+    <class name="DB.BillProd" table="billprod">
+        <id name="id">
+            <column name="id" sql-type="bigint"/>
+            <generator class="native"/>
+        </id>
+        <property name="bno">
+            <column name="bno" sql-type="varchar(50)"/>
+        </property>
+        <property name="srno">
+            <column name="srno" sql-type="int"/>
+        </property>
+        <property name="date">
+            <column name="date" sql-type="date"/>
+        </property>
+        <property name="bltr">
+            <column name="bltr" sql-type="numeric(12,2)"/>
+        </property>
+        <property name="bfat">
+            <column name="bfat" sql-type="numeric(12,2)"/>
+        </property>
+        <property name="bgfat">
+            <column name="bgfat" sql-type="numeric(12,2)"/>
+        </property>
+        <property name="bttl">
+            <column name="bttl" sql-type="numeric(12,2)"/>
+        </property>
+        <property name="cltr">
+            <column name="cltr" sql-type="numeric(12,2)"/>
+        </property>
+        <property name="cfat">
+            <column name="cfat" sql-type="numeric(12,2)"/>
+        </property>
+        <property name="cgfat">
+            <column name="cgfat" sql-type="numeric(12,2)"/>
+        </property>
+        <property name="cttl">
+            <column name="cttl" sql-type="numeric(12,2)"/>
+        </property>
+        <property name="d">
+            <column name="d" sql-type="int" default="1"/>
+        </property>
+        <many-to-one name="bill" column="bill" class="DB.Bill" cascade="none" not-null="false"/>
+
+    </class>
+
+    <class name="DB.BillProduct" table="billproduct">
+        <id name="id">
+            <column name="id" sql-type="bigint"/>
+            <generator class="native"/>
+        </id>
+        <property name="d">
+            <column name="d" sql-type="int" default="1"/>
+        </property>
+        <many-to-one name="bill" column="bill" class="DB.Bill" cascade="none" not-null="false"/>
+        <many-to-one name="buffaloMilk" column="buffalomilk" class="DB.BuffaloMilk" cascade="none" not-null="false"/>
+        <many-to-one name="cowMilk" column="cowmilk" class="DB.CowMilk" cascade="none" not-null="false"/>
+    </class>
+
+
+</hibernate-mapping>
